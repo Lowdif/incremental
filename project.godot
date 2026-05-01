@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Incremental"
+run/main_scene="uid://bt7ksegcx5vxo"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+mouse_cursor/custom_image="uid://tvyu5auryrm0"
 
 [physics]
 

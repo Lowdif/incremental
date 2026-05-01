@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cu431fc1o7lno"]
+
+[ext_resource type="Script" uid="uid://dcc0uj7tr3vy4" path="res://systems/perk.gd" id="1_om57e"]
+[ext_resource type="Texture2D" uid="uid://ovlww66doff2" path="res://icon.svg" id="1_wny5o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_om57e"]
+line_spacing = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_j6ro5"]
+line_spacing = 0.0
+font_size = 8
+
+[node name="Perk" type="Control" unique_id=1833212047]
+layout_mode = 3
+anchor_right = 0.12847222
+anchor_bottom = 0.33179012
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_om57e")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=514318521]
+clip_contents = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=166460448]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=444147178]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1128076184]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("1_wny5o")
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=253697987]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "Godot Card"
+label_settings = SubResource("LabelSettings_om57e")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Description" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1307892263]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "Placeholder card for the godot game. Need not stretch. This is the smart version Of the words."
+label_settings = SubResource("LabelSettings_j6ro5")
+horizontal_alignment = 1
+autowrap_mode = 3

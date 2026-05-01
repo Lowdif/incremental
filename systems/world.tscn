@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bt7ksegcx5vxo"]
+
+[ext_resource type="Texture2D" uid="uid://cjfqievkd6vhh" path="res://test/test_grass.png" id="1_sdsu8"]
+[ext_resource type="PackedScene" uid="uid://i28dgvd6188f" path="res://systems/game_manager.tscn" id="2_kei5i"]
+[ext_resource type="PackedScene" uid="uid://cw7ta1qmvxt2j" path="res://systems/iu_manager.tscn" id="3_cn8hj"]
+
+[node name="World" type="Node2D" unique_id=1952494436]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=781739228]
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("1_sdsu8")
+stretch_mode = 1
+
+[node name="GameManager" parent="." unique_id=360183166 node_paths=PackedStringArray("world_camera") instance=ExtResource("2_kei5i")]
+world_camera = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=469801288]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1660322849]
+
+[node name="IU_manager" parent="CanvasLayer" unique_id=1689488233 instance=ExtResource("3_cn8hj")]

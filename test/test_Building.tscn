@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wh5mnrcg8j2o"]
+
+[ext_resource type="Script" uid="uid://7d0tg37oy2tt" path="res://test/test_building.gd" id="1_eiuo8"]
+[ext_resource type="Texture2D" uid="uid://ovlww66doff2" path="res://icon.svg" id="2_02s18"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02s18"]
+size = Vector2(128, 128)
+
+[node name="TestBuilding" type="StaticBody2D" unique_id=1324236552]
+script = ExtResource("1_eiuo8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1367383770]
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_02s18")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1095020753]
+shape = SubResource("RectangleShape2D_02s18")
